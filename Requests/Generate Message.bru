@@ -1,0 +1,22 @@
+meta {
+  name: Generate Message
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{serviceUrl}}/api/generate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "message":"Hello, are you an AI Model?"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: AISummarizer
+  ai:
+    ollama:
+      base-url: http://192.168.0.217:11434
+      init:
+        max-retries: 3
+      chat:
+        options:
+          model: llama3.1:8b-instruct-q4_K_M
+
+
+prompts:
+  summaryPrompt: "You are a helpful assistant that summarizes long articles into a concise summary. Take the provided article that is in html content and summarize it into a concise summary."

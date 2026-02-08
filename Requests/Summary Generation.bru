@@ -1,0 +1,22 @@
+meta {
+  name: Summary Generation
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{serviceUrl}}/api/generate-summary
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "message":"https://addyosmani.com/blog/good-spec/?&aid=recFG3n1IYx6O05CG https://sre.google/sre-book/table-of-contents/?utm_source=tldrwebdev https://jamesclear.com/3-2-1 https://www.makingsoftware.com/"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
